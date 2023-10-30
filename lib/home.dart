@@ -64,7 +64,40 @@ class _homeState extends State<home> {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 70.h,),
+              Row(
+                children: [
+                  SizedBox(width: 50.w,),
+                  GestureDetector(onTap:  (){
+                    context.read<CounterBloc>().add(DecrementEvent1());
+                  },
+                    child: Container(
+                      width: 100.w,
+                      height: 100.h,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF53B175),
+                        shape: OvalBorder(),
+                      ),
+                      child: Icon(Icons.sentiment_dissatisfied, size: 34.sp,),
+                    ),
+                  ),
+                  SizedBox(width: 50.w,),
+                  GestureDetector(onTap:  (){
+                    context.read<CounterBloc>().add(DecrementEvent2());
+                  },
+                    child: Container(
+                      width: 100.w,
+                      height: 100.h,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF53B175),
+                        shape: OvalBorder(),
+                      ),
+                      child: Icon(Icons.clear, size: 34.sp,),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         );
